@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calendar_day_default"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/tvViewStatic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:text="@string/view_static"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgToLeft"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_toleft" />
+
+        <TextView
+            android:id="@+id/tvMonthDark"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgToRight"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_toright" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/calendar_mon_default_background"
+        android:weightSum="7">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_full_border"
+            android:gravity="center"
+            android:text="@string/m"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/tu"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/w"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/th"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/f"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/s"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_miss_left_border"
+            android:gravity="center"
+            android:text="@string/s"
+            android:textAllCaps="true"
+            android:textColor="@color/calendar_day_default_text"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <com.example.vinhhuynhlb.androidcalendarviews.view.UnSwipeViewPager
+        android:id="@+id/unSwipeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

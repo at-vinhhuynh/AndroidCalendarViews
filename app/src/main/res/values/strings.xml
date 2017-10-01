@@ -7,4 +7,18 @@
     <string name="fri">fri</string>
     <string name="sat">sat</string>
     <string name="sun">sun</string>
+    <string name="todo_list">Todo List</string>
+    <string name="dummy_october">October</string>
+    <string name="m">m</string>
+    <string name="tu">t</string>
+    <string name="w">w</string>
+    <string name="th">t</string>
+    <string name="f">f</string>
+    <string name="sa">s</string>
+    <string name="s">s</string>
+    <string name="view_static">View Static</string>
+    <string name="title_static">Statistics.</string>
+    <string name="title_flower">Followers</string>
+    <string name="title_flowing">Following</string>
+    <string name="title_upload">Uploads</string>
 </resources>

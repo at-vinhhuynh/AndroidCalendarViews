@@ -57,33 +57,31 @@ class CalendarFragment : Fragment() {
         val firstDayOfNextMonth = 7 - date.withDayOfMonth(lastDayOfThisMonth).dayOfWeek
 
         // Add Previous Month's day
-        for (i: Int in 0 until lastDayOfLastMonth) {
-            val day = Integer.parseInt(date.withDayOfMonth(1).plusDays(i - lastDayOfLastMonth).toString("dd"))
-            val calendarDay = CalendarDay(false, day, false, getRandomTask())
-            calendarDays.add(calendarDay)
-        }
+        (0 until lastDayOfLastMonth)
+                .map { Integer.parseInt(date.withDayOfMonth(1).plusDays(it - lastDayOfLastMonth).toString(DarkCalendarFragment.DATE_FORMAT_DAY)) }
+                .map { CalendarDay(false, it, false, getRandomTask(), "") }
+                .forEach { calendarDays.add(it) }
 
         // Add Current Month's day
         for (i: Int in 0 until lastDayOfThisMonth) {
-            val day = Integer.parseInt(date.withDayOfMonth(i + 1).toString("dd"))
+            val day = Integer.parseInt(date.withDayOfMonth(i + 1).toString(DarkCalendarFragment.DATE_FORMAT_DAY))
             // Check is today
-            val isToday = date.withDayOfMonth(i + 1).toString("MM/dd/YYYY") == DateTime().toString("MM/dd/YYYY")
-            val calendarDay = CalendarDay(isToday, day, true, getRandomTask())
+            val isToday = date.withDayOfMonth(i + 1).toString(DarkCalendarFragment.DATE_FORMAT_FULL) == DateTime().toString(DarkCalendarFragment.DATE_FORMAT_FULL)
+            val calendarDay = CalendarDay(isToday, day, true, getRandomTask(), "")
             calendarDays.add(calendarDay)
         }
 
         // Add Next Month's day
-        for (i: Int in 0 until firstDayOfNextMonth) {
-            val day = Integer.parseInt(date.withDayOfMonth(lastDayOfThisMonth).plusDays(i + 1).toString("dd"))
-            val calendarDay = CalendarDay(false, day, false, getRandomTask())
-            calendarDays.add(calendarDay)
-        }
+        (0 until firstDayOfNextMonth)
+                .map { Integer.parseInt(date.withDayOfMonth(lastDayOfThisMonth).plusDays(it + 1).toString(DarkCalendarFragment.DATE_FORMAT_DAY)) }
+                .map { CalendarDay(false, it, false, getRandomTask(), "") }
+                .forEach { calendarDays.add(it) }
     }
 
     private fun getRandomTask(): Boolean = (Math.random() * 50 + 1).toInt() % 3 == 0
 
-    fun getYear(pos: Int): String = DateTime().plusMonths(getOffSetPage(pos)).toString("YYYY")
+    fun getYear(pos: Int): String = DateTime().plusMonths(getOffSetPage(pos)).toString(DarkCalendarFragment.DATE_FORMAT_YEAR)
 
     fun getMonth(pos: Int): String =
-            DateTime().plusMonths(getOffSetPage(pos)).toString("MMMM")
+            DateTime().plusMonths(getOffSetPage(pos)).toString(DarkCalendarFragment.DATE_FORMAT_MONTH)
 }

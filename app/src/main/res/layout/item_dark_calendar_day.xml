@@ -3,7 +3,7 @@
     android:id="@+id/lnDay"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_day_selector"
+    android:background="@drawable/bg_dark_day_selector"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="5dp">
@@ -11,13 +11,11 @@
     <TextView
         android:id="@+id/tvDay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="14dp" />
+        android:text="@string/s"
+        android:textAllCaps="true"
+        android:textColor="@color/calendar_day_default_text"
+        android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/tvRedPoint"
-        android:layout_width="3dp"
-        android:layout_height="3dp"
-        android:background="@drawable/bg_red_point" />
 </LinearLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/calendar_day_selected" android:state_selected="true" />
-    <item android:drawable="@color/calendar_day_default" />
+    <item android:drawable="@drawable/bg_tab_title_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/bg_tab_title_un_selected" />
 </selector>

@@ -6,4 +6,21 @@
     <color name="darker_gray">#aaa</color>
     <color name="black">#ff000000</color>
     <color name="gray_trans">#33ffffff</color>
+
+    <color name="calendar_day_selected">#576574</color>
+    <color name="calendar_day_default">#323232</color>
+    <color name="calendar_day_default_text">#99a3ac</color>
+    <color name="calendar_mon_default_text">#a5b5c4</color>
+    <color name="calendar_mon_default_text_job">#505052</color>
+    <color name="calendar_mon_default_background">#2b2b2b</color>
+    <color name="calendar_border">#393939</color>
+    <color name="text_other_month">#565656</color>
+    <color name="todo_border_color">#565656</color>
+    <color name="task_text_color">#5f6265</color>
+    <color name="tab_title_selected">#8e969f</color>
+    <color name="tab_title_dark">#292929</color>
+    <color name="tab_title_selected_dark">#7c8997</color>
+    <color name="dark_white">#a9aeb2</color>
+    <color name="white">#ffffff</color>
+    <color name="static_line">#1e1e1e</color>
 </resources>
