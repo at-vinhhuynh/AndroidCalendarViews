@@ -23,4 +23,6 @@
     <color name="dark_white">#a9aeb2</color>
     <color name="white">#ffffff</color>
     <color name="static_line">#1e1e1e</color>
+    <color name="static_chard_process">#919fad</color>
+    <color name="yellow">#ffae00</color>
 </resources>
